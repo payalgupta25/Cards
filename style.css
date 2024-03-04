@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(78, 76, 76);
+    min-height: 100vh;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box{
+    width: 250px;
+    height:300px;
+    margin: 40px; 
+    border-radius: 16px;
+    perspective: 2500px;
+    position: relative;
+    background: linear-gradient(to bottom,rgb(227,178,70),orange,red);      
+}
+
+p{
+    color: beige;
+    font-family: monospace;
+    padding: 5px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.b2{
+    background: linear-gradient(to bottom,rgb(11, 80, 53),rgb(151, 192, 54),rgb(155, 219, 142));   
+}
+
+.b3{
+    background: linear-gradient(to bottom,rgb(4, 0, 255),rgb(38, 152, 156),#CB2639);   
+}
+
+.hov{
+    width: 250px;
+    height:300px;
+    transition: all 0.5s; 
+    transform: scale(0.78); 
+}
+
+.box:hover p{
+    opacity: 0;
+}
+
+.box:hover{
+    transform: perspective(900px) translateY(-5%) rotateX(55deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.box:hover .hov{
+    transform: perspective(-900px) translateY(-59%) rotateX(155deg) translateZ(120deg);
+    opacity: 0;
+}
+
+.over{
+    position: absolute;
+    left:-70px;
+    top: -190px;
+    transform: scale(0.7);
+    opacity: 0;    
+}
+
+.box:hover .over{
+    opacity: 1;
+    transform: rotate(0px) translateY(-59%) rotateX(15deg) translateZ(10deg);
+}
+
+
+
+
+
+
+
+
+
+
+
